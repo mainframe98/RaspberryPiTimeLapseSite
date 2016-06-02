@@ -1,5 +1,19 @@
 ﻿@{
-    
+    if (IsPost)
+    {
+        if(!Request.Form["startopname"].IsEmpty())
+        {
+            
+        }
+        if(!Request.Form["stopopname"].IsEmpty())
+        {
+            
+        }
+        if(!Request.Form["sluitpiaf"].IsEmpty())
+        {
+            
+        }
+    }
 }
 
 <!DOCTYPE html>
@@ -7,10 +21,22 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>My Site's Title</title>
+        <title>TimeLapse rail</title>
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     </head>
     <body>
-        
+        <h1>Instellingen</h1>
+            <h3>Tijdsduur opname</h3>
+            <label>In uren:minuten</label>
+            <input type="time" value="00:00"/>
+            <h3>Tijdsduur filmpje</h3>
+            <label>In minuten:seconden</label>
+            <input type="time" value="00:00"/>
+        <h1>Activeer</h1>
+        <form method="post">
+            <input type="submit" name="startopname" value="Start Opname"/>
+            <input type="submit" name="stopopname" value="Stop Opname"/>
+            <input type="submit" name="sluitpiaf" value="Sluit Raspberry Pi af"/>
+        </form>
     </body>
 </html>
