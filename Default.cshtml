@@ -1,9 +1,12 @@
-﻿@{
+﻿@using System;
+@using System.Diagnostics;
+@using System.ComponentModel;
+@{
     if (IsPost)
     {
         if(!Request.Form["startopname"].IsEmpty())
         {
-            
+            //Process.Start("bash sudo shutdown -r now");
         }
         if(!Request.Form["stopopname"].IsEmpty())
         {
